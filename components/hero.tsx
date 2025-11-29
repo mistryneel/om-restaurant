@@ -1,0 +1,97 @@
+import Link from "next/link"
+import { MapPin, Clock } from "lucide-react"
+
+export function Hero() {
+  return (
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%234A4A45' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 bg-[#C9A86A]/20 text-[#4A4A45] px-4 py-2 rounded-full mb-6">
+              <span className="text-[#C06C3D] font-bold">✦</span>
+              <span className="text-sm font-medium">100% Pure & Vegetarian</span>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-semibold text-[#4A4A45] leading-tight mb-6 text-balance">
+              The Heart of Vegetarian Dining in <span className="text-[#C06C3D]">Salalah</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-[#4A4A45]/80 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
+              Serving the Sanaya Industrial Area with soulful Indian cuisine since 2008. From our family to yours,
+              experience the warmth of authentic vegetarian traditions.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+              <Link
+                href="#menu"
+                className="inline-flex items-center justify-center gap-2 bg-[#C06C3D] text-white px-8 py-4 rounded-full hover:bg-[#a85a32] transition-colors font-semibold text-lg shadow-lg shadow-[#C06C3D]/30"
+              >
+                View the Menu
+              </Link>
+              <a
+                href="https://maps.google.com/?q=OM+Vegetarian+Restaurant+Salalah"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-[#4A4A45] text-[#4A4A45] px-8 py-4 rounded-full hover:bg-[#4A4A45] hover:text-[#F4F1EA] transition-colors font-semibold text-lg"
+              >
+                <MapPin className="w-5 h-5" />
+                Get Directions
+              </a>
+            </div>
+
+            <div className="flex items-center justify-center lg:justify-start gap-6 text-[#4A4A45]/70">
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-[#C9A86A]" />
+                <span>7:30 AM - 10:30 PM</span>
+              </div>
+              <div className="hidden sm:block w-1 h-1 bg-[#C9A86A] rounded-full" />
+              <span className="hidden sm:block">7 Days a Week</span>
+            </div>
+          </div>
+
+          {/* Hero Image */}
+          <div className="relative">
+            <div className="relative aspect-square max-w-lg mx-auto">
+              {/* Decorative Ring */}
+              <div className="absolute inset-0 border-4 border-[#C9A86A]/30 rounded-full animate-pulse" />
+              <div className="absolute inset-4 border-2 border-dashed border-[#C9A86A]/50 rounded-full" />
+
+              {/* Main Image Container */}
+              <div className="absolute inset-8 rounded-full overflow-hidden shadow-2xl">
+                <img
+                  src="/indian-vegetarian-thali-with-colorful-curries--ric.jpg"
+                  alt="OM Special Thali - A complete Indian vegetarian meal"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Floating Badge */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#4A4A45] text-[#F4F1EA] px-6 py-3 rounded-full shadow-lg">
+                <span className="font-serif font-bold">Since 2008</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#4A4A45]/50">
+        <span className="text-xs uppercase tracking-widest">Scroll</span>
+        <div className="w-6 h-10 border-2 border-[#4A4A45]/30 rounded-full flex justify-center pt-2">
+          <div className="w-1.5 h-3 bg-[#C06C3D] rounded-full animate-bounce" />
+        </div>
+      </div>
+    </section>
+  )
+}
