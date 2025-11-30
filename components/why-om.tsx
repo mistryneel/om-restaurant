@@ -3,7 +3,7 @@ import { Leaf, UtensilsCrossed, ScrollText, MapPin } from "lucide-react"
 const features = [
   {
     icon: Leaf,
-    title: "100% Pure & Vegetarian",
+    title: "100% Vegetarian",
     description:
       "A kitchen free from meat and eggs. We offer specific Jain options (No Onion, No Garlic) for those who seek spiritual purity in their diet.",
   },

@@ -9,8 +9,9 @@ export function Vignette({ text }: VignetteProps) {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50m-40 0a40,40 0 1,0 80,0a40,40 0 1,0 -80,0' fill='none' stroke='%23C9A86A' strokeWidth='0.5'/%3E%3C/svg%3E")`,
-            backgroundSize: "100px 100px",
+            backgroundImage: `url('/inflicted.png')`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '100px 100px',
           }}
         />
       </div>

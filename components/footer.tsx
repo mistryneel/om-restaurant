@@ -93,7 +93,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-[#F4F1EA]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#F4F1EA]/60">
           <p>© {currentYear} OM Vegetarian Restaurant. All rights reserved.</p>
-          <p>100% Pure & Vegetarian • No Meat • No Eggs</p>
+          <p>100% Vegetarian • No Meat • No Eggs</p>
         </div>
       </div>
     </footer>
