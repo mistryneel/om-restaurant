@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Phone, Menu, X } from "lucide-react"
+import { DistortedGlass } from "@/components/ui/distorted-glass"
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -25,12 +26,11 @@ export function Header() {
   }, [])
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#F4F1EA]/95 backdrop-blur-sm shadow-md" : "bg-transparent"
-        }`}
-    >
+    <header className={"fixed top-5 left-0 right-0 z-50 transition-all duration-300 bg-transparent"}>
+      <DistortedGlass className={`mx-auto px-4 max-w-6xl absolute inset-0 h-20 block rounded-full transition-opacity ${isScrolled ? 'opacity-100 bg-[#F4F1EA]/50 shadow-sm' : 'opacity-0'}`} />
+
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 relative z-10">
           {/* Logo */}
           <Link href="#home" className="flex items-center gap-2">
             <img
